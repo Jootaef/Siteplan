@@ -3,10 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Popular Cars Ecuador</title>
-  <meta name="description" content="Reviews and buying tips for the top‑selling cars in Ecuador." />
+  <title>Thank You | Popular Cars Ecuador</title>
   <link rel="stylesheet" href="css/styles.css" />
-  <link rel="icon" href="images/logo.ico" type="image/x-icon" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 </head>
 
 <body>
@@ -18,7 +17,7 @@
     <nav>
       <button id="menu-toggle">☰</button>
       <ul id="menu">
-        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="cars.html">Cars</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
@@ -27,18 +26,9 @@
 
   <!-- ===== MAIN ===== -->
   <main style="padding:1rem">
-    <picture>
-      <source srcset="images/hero.webp" type="image/webp" />
-      <img src="images/hero.jpg" alt="Ecuadorian highway" loading="lazy" />
-    </picture>
-
-    <h2>Why this site?</h2>
-    <p>
-      Buying a car in Ecuador can be confusing—import taxes, local
-      assembly, and regional preferences all affect prices. Our goal is
-      to simplify your search by listing the best‑selling models with
-      real‑world specs and prices.
-    </p>
+    <h2>Thank you!</h2>
+    <p>Your submission:</p>
+    <pre id="output"></pre>
   </main>
 
   <!-- ===== FOOTER ===== -->
@@ -49,10 +39,17 @@
 
   <!-- ===== SCRIPTS ===== -->
   <script type="module">
-    import { qs, setYear, toggleMenu, initTheme } from './js/main.js';
+    import { qs, setYear, toggleMenu } from './js/main.js';
     setYear();
-    initTheme();
     qs('#menu-toggle').onclick = toggleMenu;
+
+    /* Display submitted form data */
+    const params = new URLSearchParams(location.search);
+    qs('#output').textContent = JSON.stringify(
+      Object.fromEntries(params),
+      null,
+      2
+    );
   </script>
 </body>
 </html>

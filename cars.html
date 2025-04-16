@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Popular Cars Ecuador</title>
-  <meta name="description" content="Reviews and buying tips for the top‑selling cars in Ecuador." />
+  <title>Cars | Popular Cars Ecuador</title>
+  <meta name="description" content="Browse the 30 best‑selling cars in Ecuador." />
   <link rel="stylesheet" href="css/styles.css" />
-  <link rel="icon" href="images/logo.ico" type="image/x-icon" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 </head>
 
 <body>
@@ -18,8 +18,8 @@
     <nav>
       <button id="menu-toggle">☰</button>
       <ul id="menu">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="cars.html">Cars</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cars.html" class="active">Cars</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
@@ -27,18 +27,8 @@
 
   <!-- ===== MAIN ===== -->
   <main style="padding:1rem">
-    <picture>
-      <source srcset="images/hero.webp" type="image/webp" />
-      <img src="images/hero.jpg" alt="Ecuadorian highway" loading="lazy" />
-    </picture>
-
-    <h2>Why this site?</h2>
-    <p>
-      Buying a car in Ecuador can be confusing—import taxes, local
-      assembly, and regional preferences all affect prices. Our goal is
-      to simplify your search by listing the best‑selling models with
-      real‑world specs and prices.
-    </p>
+    <h2>Top‑Selling Cars</h2>
+    <section id="cars" class="grid"></section>
   </main>
 
   <!-- ===== FOOTER ===== -->
@@ -49,9 +39,9 @@
 
   <!-- ===== SCRIPTS ===== -->
   <script type="module">
-    import { qs, setYear, toggleMenu, initTheme } from './js/main.js';
+    import { qs, setYear, toggleMenu } from './js/main.js';
+    import './js/cars.js';   /* builds the 30 cards */
     setYear();
-    initTheme();
     qs('#menu-toggle').onclick = toggleMenu;
   </script>
 </body>

@@ -1,0 +1,189 @@
+/* ───────────────────────────
+   Global variables & reset
+   ─────────────────────────── */
+   *,*::before,*::after{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+  }
+  
+  :root{
+    /* Brand palette (teal family) */
+    --clr-primary:#005f6b;          /* dark teal – AA on white */
+    --clr-secondary:#008c9e;        /* medium teal – AA on white */
+    --clr-tertiary:#00b4cc;         /* light teal (accents only) */
+  
+    /* AAA‑safe teal for white text */
+    --clr-tertiary-dark:#006274;    /* #fff ↔ #006274 = 7.4 : 1 */
+  
+    --clr-highlight:#00dffc;
+  
+    /* UI neutrals */
+    --clr-bg:#343838;               /* page background */
+    --clr-surface:#ffffff;          /* card / form background */
+    --clr-muted-dark:#4a4a4a;       /* AAA gray (7 : 1 on white) */
+    --clr-border:#8c8c8c;           /* AA border / placeholder */
+    --clr-text:#ffffff;             /* body text on dark bg */
+    --clr-text-dark:#222;           /* text on white bg */
+  
+    /* Effects */
+    --radius:.5rem;
+    --shadow:0 2px 4px rgba(0,0,0,.1);
+  
+    font-family:'Roboto',sans-serif;
+  }
+  
+  body{
+    background:var(--clr-bg);
+    color:var(--clr-text);
+    line-height:1.6;
+  }
+  
+  /* ─────────── Header & Nav ─────────── */
+  header,footer{
+    background:var(--clr-primary);
+    color:#fff;
+    padding:1rem 2rem;
+  }
+  
+  nav ul{
+    list-style:none;
+    display:flex;
+    gap:1rem;
+    flex-wrap:wrap;
+  }
+  nav a{color:#fff;text-decoration:none;font-weight:600;}
+  nav a.active{text-decoration:underline;}
+  nav a:hover{color:var(--clr-highlight);}
+  
+  /* Mobile nav toggle */
+  #menu-toggle{display:none}
+  @media(max-width:640px){
+    nav ul{display:none;flex-direction:column}
+    nav ul.open{display:flex}
+    #menu-toggle{
+      display:block;
+      background:none;border:none;
+      font-size:1.5rem;color:#fff;
+    }
+  }
+  
+  /* ─────────── Headings ─────────── */
+  h1,h2,h3{color:inherit;}           /* inherit by default */
+  
+  /* White headings on dark backgrounds */
+  header h1,
+  .hero h1,.hero h2,.hero h3{color:#fff;}
+  
+  /* ─────────── Hero banner ─────────── */
+  .hero{position:relative;text-align:center;color:#fff;}
+  .hero-overlay{
+    position:absolute;inset:0;
+    background:rgba(0,95,107,.7);
+    display:flex;flex-direction:column;justify-content:center;
+    padding:2rem;
+  }
+  .cta-button{
+    display:inline-block;
+    margin-top:1rem;
+    padding:.75rem 1.5rem;
+    background:var(--clr-tertiary-dark);
+    color:#fff;
+    border:none;border-radius:var(--radius);
+    font-weight:bold;text-decoration:none;
+    text-shadow:0 1px 2px rgba(0,0,0,.4);
+  }
+  .cta-button:hover{background:var(--clr-primary);}
+  
+  /* ─────────── Cards & grid ─────────── */
+  .grid{display:grid;gap:1rem;}
+  @media(min-width:641px){.grid{grid-template-columns:repeat(2,1fr);}}
+  @media(min-width:1025px){.grid{grid-template-columns:repeat(4,1fr);}}
+  
+  /* Card */
+  .card{
+    background:var(--clr-surface);
+    color:var(--clr-text-dark);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    transition:transform .25s;
+  }
+  @media(hover:hover) and (min-width:641px){
+    .card:hover{transform:translateY(-4px);}
+    .card img:hover{transform:scale(1.05);transition:transform .3s;}
+  }
+  .card img{width:100%;height:auto;display:block;}
+  .card address{
+    font-style:normal;
+    color:var(--clr-muted-dark);
+    font-size:.9rem;
+    margin:.5rem 0;
+  }
+  .card-btn{
+    align-self:start;
+    margin:1rem;
+    padding:.6rem 1.2rem;
+    background:var(--clr-tertiary-dark);
+    color:#fff;
+    border:none;border-radius:.3rem;
+    text-decoration:none;font-weight:600;
+    text-shadow:0 1px 2px rgba(0,0,0,.4);
+  }
+  .card-btn:hover{background:var(--clr-primary);}
+  
+  /* Completed / not‑completed badges */
+  .completed{
+    background:var(--clr-muted-dark);
+    color:var(--clr-primary);
+  }
+  .not-completed{
+    background:var(--clr-primary);
+    color:#fff;
+  }
+  
+  /* ─────────── Modal dialog ─────────── */
+  dialog{
+    border:none;
+    border-radius:var(--radius);
+    padding:0;
+    max-width:90%;
+  }
+  dialog::backdrop{background:rgba(0,0,0,.5);}
+  .close{
+    position:absolute;top:.5rem;right:.5rem;
+    background:none;border:none;
+    font-size:1.5rem;color:var(--clr-primary);
+    cursor:pointer;
+  }
+  
+  /* ─────────── Forms ─────────── */
+  form{
+    display:grid;gap:1rem;
+    max-width:400px;margin:auto;padding:1rem;
+    background:var(--clr-surface);color:var(--clr-text-dark);
+    border-radius:var(--radius);
+  }
+  label{display:flex;flex-direction:column;font-weight:600;}
+  input,textarea,select{
+    padding:.5rem;
+    border:1px solid var(--clr-border);
+    border-radius:.3rem;
+    color:var(--clr-text-dark);
+  }
+  input::placeholder,
+  textarea::placeholder{
+    color:var(--clr-muted-dark);
+    opacity:1;
+  }
+  button[type=submit]{
+    background:var(--clr-tertiary-dark);
+    color:#fff;
+    padding:.6rem;
+    border:none;border-radius:.3rem;
+    text-shadow:0 1px 2px rgba(0,0,0,.4);
+  }
+  button[type=submit]:hover{background:var(--clr-primary);}
+  

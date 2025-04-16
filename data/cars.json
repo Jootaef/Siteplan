@@ -1,0 +1,168 @@
+[
+    {
+      "id": 16,
+      "brand": "Chevrolet",
+      "model": "Captiva",
+      "price": "$25990",
+      "engine": "1.5 L Turbo",
+      "fuel": "Gasoline",
+      "summary": "Three‑row SUV seating up to seven.",
+      "details": "Updated infotainment system and 360° camera for 2025 model.",
+      "img": "../images/captiva.webp"
+    },
+    {
+      "id": 17,
+      "brand": "Renault",
+      "model": "Duster",
+      "price": "$23490",
+      "engine": "1.6 L",
+      "fuel": "Gasoline",
+      "summary": "Rugged crossover with excellent ground clearance.",
+      "details": "Widely used in the Sierra region for its durability.",
+      "img": "../images/renault.webp"
+    },
+    {
+      "id": 18,
+      "brand": "Jetour",
+      "model": "X70",
+      "price": "$24990",
+      "engine": "1.5 L Turbo",
+      "fuel": "Gasoline",
+      "summary": "Value‑packed 7‑seat SUV from Chery’s premium sub‑brand.",
+      "details": "Panoramic sunroof and 10‑inch touchscreen standard.",
+      "img": "../images/jetour.webp"
+    },
+    {
+      "id": 19,
+      "brand": "Chevrolet",
+      "model": "Groove",
+      "price": "$20490",
+      "engine": "1.5 L",
+      "fuel": "Gasoline",
+      "summary": "Entry‑level crossover with sporty styling.",
+      "details": "Compact footprint—perfect for city parking.",
+      "img": "../images/groover.webp"
+    },
+    {
+      "id": 20,
+      "brand": "Kia",
+      "model": "Sportage",
+      "price": "$31990",
+      "engine": "2.0 L",
+      "fuel": "Gasoline",
+      "summary": "Best‑selling compact SUV, five‑star safety rating.",
+      "details": "New digital cluster and ADAS suite in 2025 refresh.",
+      "img": "../images/sportage.webp"
+    },
+    {
+      "id": 21,
+      "brand": "Chery",
+      "model": "Tiggo 2 Pro",
+      "price": "$19990",
+      "engine": "1.0 L Turbo",
+      "fuel": "Gasoline",
+      "summary": "Affordable crossover with bold front grille.",
+      "details": "Offers 9‑inch infotainment screen and 6 airbags.",
+      "img": "../images/chery.webp"
+    },
+    {
+      "id": 22,
+      "brand": "DFSK",
+      "model": "Glory 560",
+      "price": "$22490",
+      "engine": "1.5 L Turbo",
+      "fuel": "Gasoline",
+      "summary": "Seven‑seat SUV known for generous warranty.",
+      "details": "Rear A/C vents and roof rails included.",
+      "img": "../images/glory.webp"
+    },
+    {
+      "id": 23,
+      "brand": "Suzuki",
+      "model": "Swift",
+      "price": "$17990",
+      "engine": "1.2 L",
+      "fuel": "Gasoline",
+      "summary": "Fun‑to‑drive hatchback with excellent fuel economy.",
+      "details": "Available with dual‑tone paint and 6‑speed manual.",
+      "img": "../images/swift.webp"
+    },
+    {
+      "id": 24,
+      "brand": "Kia",
+      "model": "Sonet",
+      "price": "$21490",
+      "engine": "1.5 L",
+      "fuel": "Gasoline",
+      "summary": "Sub‑compact SUV, elevated driving position.",
+      "details": "Features Bose sound system in top trim.",
+      "img": "../images/sonet.webp"
+    },
+    {
+      "id": 25,
+      "brand": "Chevrolet",
+      "model": "Sail",
+      "price": "$14990",
+      "engine": "1.5 L",
+      "fuel": "Gasoline",
+      "summary": "Budget‑friendly sedan with large trunk.",
+      "details": "Popular with taxi fleets for its reliability.",
+      "img": "../images/sail.webp"
+    },
+    {
+      "id": 26,
+      "brand": "Chevrolet",
+      "model": "Joy",
+      "price": "$15990",
+      "engine": "1.4 L",
+      "fuel": "Gasoline",
+      "summary": "Rebadged previous‑gen Onix—great value.",
+      "details": "Standard rear parking sensors and 7‑inch screen.",
+      "img": "../images/joy.webp"
+    },
+    {
+      "id": 27,
+      "brand": "SWM",
+      "model": "G01",
+      "price": "$24490",
+      "engine": "1.5 L Turbo",
+      "fuel": "Gasoline",
+      "summary": "Italian‑designed SUV manufactured in China.",
+      "details": "Comes with panoramic roof and 360° cameras.",
+      "img": "../images/swm.webp"
+    },
+    {
+      "id": 28,
+      "brand": "Kia",
+      "model": "Seltos",
+      "price": "$28490",
+      "engine": "1.6 L",
+      "fuel": "Gasoline",
+      "summary": "Stylish crossover with two‑tone roof option.",
+      "details": "UVO connectivity and ventilated front seats.",
+      "img": "../images/seltos.webp"
+    },
+    {
+      "id": 29,
+      "brand": "Kia",
+      "model": "Soluto",
+      "price": "$15490",
+      "engine": "1.4 L",
+      "fuel": "Gasoline",
+      "summary": "Compact sedan, excellent fuel efficiency.",
+      "details": "Rear camera and 7‑inch touchscreen standard.",
+      "img": "../images/soluto.webp"
+    },
+    {
+      "id": 30,
+      "brand": "Chevrolet",
+      "model": "D‑Max",
+      "price": "$33990",
+      "engine": "3.0 L Turbo Diesel",
+      "fuel": "Diesel",
+      "summary": "Workhorse pickup with 4×4 capability.",
+      "details": "New generation features 6‑speed automatic and LED headlights.",
+      "img": "../images/dmax.webp"
+    }
+  ]
+  

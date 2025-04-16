@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Contact | Popular Cars Ecuador</title>
+
+  <!-- Meta -->
+  <meta name="description" content="Send us your questions about buying a car in Ecuador." />
+
+  <!-- Styles & favicon -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+</head>
+
+<body>
+  <!-- ===== HEADER ===== -->
+  <header>
+    <img src="images/logo.svg" alt="Site logo" style="height:48px" />
+    <h1>Popular Cars Ecuador</h1>
+
+    <nav>
+      <button id="menu-toggle">☰</button>
+      <ul id="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="cars.html">Cars</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ===== MAIN ===== -->
+  <main>
+    <h2 style="text-align:center;padding-top:1rem">Get in touch</h2>
+
+    <form action="thanks.html" method="get">
+      <label>
+        Name
+        <input name="name" required />
+      </label>
+
+      <label>
+        Email
+        <input type="email" name="email" required />
+      </label>
+
+      <label>
+        Preferred brand
+        <select name="brand">
+          <option>Chevrolet</option>
+          <option>Kia</option>
+          <option>Toyota</option>
+        </select>
+      </label>
+
+      <label>
+        Message
+        <textarea name="msg" rows="4"></textarea>
+      </label>
+
+      <button type="submit">Send</button>
+    </form>
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <p>&copy; <span id="year"></span> Popular Cars Ecuador</p>
+    <p id="lastModified"></p>
+  </footer>
+
+  <!-- ===== SCRIPTS ===== -->
+  <script type="module">
+    import { qs, setYear, toggleMenu } from './js/main.js';
+    setYear();                    // updates © year and last‑modified
+    qs('#menu-toggle').onclick = toggleMenu;
+  </script>
+</body>
+</html>

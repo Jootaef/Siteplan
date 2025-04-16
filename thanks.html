@@ -11,7 +11,6 @@
 </head>
 
 <body>
-  <!-- ===== HEADER ===== -->
   <header>
     <img src="images/logo.svg" alt="Site logo" style="height:48px" />
     <h1>Popular Cars Ecuador</h1>
@@ -26,26 +25,22 @@
     </nav>
   </header>
 
-  <!-- ===== MAIN ===== -->
   <main style="padding:1rem">
     <h2>Thank you!</h2>
     <p>Your submission:</p>
     <pre id="output"></pre>
   </main>
 
-  <!-- ===== FOOTER ===== -->
   <footer>
     <p>&copy; <span id="year"></span> Popular Cars Ecuador</p>
     <p id="lastModified"></p>
   </footer>
 
-  <!-- ===== SCRIPTS ===== -->
   <script type="module">
     import { qs, setYear, toggleMenu } from './js/main.js';
     setYear();
     qs('#menu-toggle').onclick = toggleMenu;
 
-    /* Display submitted form data */
     const params = new URLSearchParams(location.search);
     qs('#output').textContent = JSON.stringify(
       Object.fromEntries(params),

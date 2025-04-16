@@ -9,7 +9,6 @@ export function setYear() {
   qs('#lastModified').textContent = `Last modified: ${document.lastModified}`;
 }
 
-/* Theme preference via localStorage */
 export function initTheme() {
   const saved = localStorage.getItem('theme') || 'light';
   document.documentElement.dataset.theme = saved;

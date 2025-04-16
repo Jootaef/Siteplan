@@ -10,7 +10,6 @@
 </head>
 
 <body>
-  <!-- ===== HEADER ===== -->
   <header>
     <img src="images/logo.svg" alt="Site logo" style="height:48px" />
     <h1>Popular Cars Ecuador</h1>
@@ -25,7 +24,6 @@
     </nav>
   </header>
 
-  <!-- ===== MAIN ===== -->
   <main style="padding:1rem">
     <picture>
       <source srcset="images/hero.webp" type="image/webp" />
@@ -41,13 +39,11 @@
     </p>
   </main>
 
-  <!-- ===== FOOTER ===== -->
   <footer>
     <p>&copy; <span id="year"></span> Popular Cars Ecuador</p>
     <p id="lastModified"></p>
   </footer>
 
-  <!-- ===== SCRIPTS ===== -->
   <script type="module">
     import { qs, setYear, toggleMenu, initTheme } from './js/main.js';
     setYear();

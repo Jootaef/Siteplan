@@ -63,16 +63,14 @@
     </form>
   </main>
 
-  <!-- ===== FOOTER ===== -->
   <footer>
     <p>&copy; <span id="year"></span> Popular Cars Ecuador</p>
     <p id="lastModified"></p>
   </footer>
 
-  <!-- ===== SCRIPTS ===== -->
   <script type="module">
     import { qs, setYear, toggleMenu } from './js/main.js';
-    setYear();                    // updates © year and last‑modified
+    setYear();                    
     qs('#menu-toggle').onclick = toggleMenu;
   </script>
 </body>

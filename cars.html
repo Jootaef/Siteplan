@@ -6,7 +6,7 @@
   <title>Cars | Popular Cars Ecuador</title>
   <meta name="description" content="Browse the 30 best‑selling cars in Ecuador." />
   <link rel="stylesheet" href="css/styles.css" />
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="images/logo.ico" type="image/x-icon" />
 </head>
 
 <body>
@@ -25,22 +25,19 @@
     </nav>
   </header>
 
-  <!-- ===== MAIN ===== -->
   <main style="padding:1rem">
     <h2>Top‑Selling Cars</h2>
     <section id="cars" class="grid"></section>
   </main>
 
-  <!-- ===== FOOTER ===== -->
   <footer>
     <p>&copy; <span id="year"></span> Popular Cars Ecuador</p>
     <p id="lastModified"></p>
   </footer>
 
-  <!-- ===== SCRIPTS ===== -->
   <script type="module">
     import { qs, setYear, toggleMenu } from './js/main.js';
-    import './js/cars.js';   /* builds the 30 cards */
+    import './js/cars.js';   
     setYear();
     qs('#menu-toggle').onclick = toggleMenu;
   </script>
